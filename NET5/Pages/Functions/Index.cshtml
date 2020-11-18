@@ -5,8 +5,6 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -21,18 +19,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Function[0].Comment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Function[0].Order)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Function[0].Delete)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Function[0].InsertAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Function[0].UpdateAt)
             </th>
             <th></th>
         </tr>
@@ -50,21 +36,8 @@
                 @Html.DisplayFor(modelItem => item.Comment)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Order)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Delete)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsertAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdateAt)
-            </td>
-            <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
             </td>
         </tr>
 }
