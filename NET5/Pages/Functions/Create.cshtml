@@ -1,0 +1,64 @@
+﻿@page
+@model NET5.Pages.Functions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Function</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Function.Code" class="control-label"></label>
+                <input asp-for="Function.Code" class="form-control" />
+                <span asp-validation-for="Function.Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Function.Name" class="control-label"></label>
+                <input asp-for="Function.Name" class="form-control" />
+                <span asp-validation-for="Function.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Function.Comment" class="control-label"></label>
+                <input asp-for="Function.Comment" class="form-control" />
+                <span asp-validation-for="Function.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Function.Order" class="control-label"></label>
+                <input asp-for="Function.Order" class="form-control" />
+                <span asp-validation-for="Function.Order" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Function.Delete" /> @Html.DisplayNameFor(model => model.Function.Delete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Function.InsertAt" class="control-label"></label>
+                <input asp-for="Function.InsertAt" class="form-control" />
+                <span asp-validation-for="Function.InsertAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Function.UpdateAt" class="control-label"></label>
+                <input asp-for="Function.UpdateAt" class="form-control" />
+                <span asp-validation-for="Function.UpdateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
